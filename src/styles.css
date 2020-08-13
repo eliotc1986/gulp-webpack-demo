@@ -1,5 +1,5 @@
-HTML CSS BabelResult
-html, body {
+html,
+body {
   margin: 0;
 }
 
@@ -12,18 +12,33 @@ html {
 body {
   height: 100%;
   width: 100%;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#5961F9), color-stop(40%, #2AFADF), to(#F9FEA5));
-  background-image: linear-gradient(180deg, #5961F9 0%, #2AFADF 40%, #F9FEA5 100%);
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#5961f9),
+    color-stop(40%, #2afadf),
+    to(#f9fea5)
+  );
+  background-image: linear-gradient(
+    180deg,
+    #5961f9 0%,
+    #2afadf 40%,
+    #f9fea5 100%
+  );
   background-repeat: no-repeat;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
-h1, p {
+h1,
+p {
   color: #204754;
-  font-family: "Nunito", sans-serif;
+  font-family: 'Nunito', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -52,7 +67,8 @@ section {
   padding: 4rem;
   background: white;
   border-radius: 8px;
-  box-shadow: 0px 0px 0 1px rgba(32, 71, 84, 0.03), 0px 0px 0 3px rgba(32, 71, 84, 0.02);
+  box-shadow: 0px 0px 0 1px rgba(32, 71, 84, 0.03),
+    0px 0px 0 3px rgba(32, 71, 84, 0.02);
 }
 section:last-child {
   margin-bottom: 0;
@@ -62,15 +78,15 @@ section:last-child {
   opacity: 0;
   will-change: transform, scale, opacity;
   -webkit-transform: translateY(6rem) scale(0.93);
-          transform: translateY(6rem) scale(0.93);
+  transform: translateY(6rem) scale(0.93);
   -webkit-transition: all 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: all 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-[data-scroll="in"] {
+[data-scroll='in'] {
   opacity: 1;
   -webkit-transform: translateY(0) scale(1);
-          transform: translateY(0) scale(1);
+  transform: translateY(0) scale(1);
 }
 
 @media (max-width: 600px) {
