@@ -18,8 +18,8 @@ From the project root, run:
 $ npm install
 ```
 
-then:
+And then:
 
 ```
-$ gulp
+$ npm start
 ```
