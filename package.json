@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "start": "parcel index.html --open",
-    "build": "parcel build index.html"
+    "start": "gulp"
   },
   "dependencies": {
     "scroll-out": "^2.2.11"
@@ -18,7 +17,6 @@
     "delete": "^1.1.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
-    "parcel-bundler": "^1.6.1",
     "vinyl-named": "^1.1.0",
     "webpack": "^4.44.1",
     "webpack-stream": "^5.2.1",
