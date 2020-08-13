@@ -4,6 +4,10 @@ Use npm modules with client side projects
 
 ## Dependencies
 
+### npm
+
+Built with npm version `12.13.0`
+
 ### gulp
 
 ```
