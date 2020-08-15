@@ -51,10 +51,10 @@ h1 {
 p {
   font-size: 2rem;
   line-height: 2.8rem;
-}
 
-p:last-child {
-  margin-bottom: -6px;
+  &:last-child {
+    margin-bottom: -6px;
+  }
 }
 
 .site-wrap {
@@ -70,10 +70,10 @@ section {
   border-radius: 8px;
   box-shadow: 0px 0px 0 1px rgba(32, 71, 84, 0.03),
     0px 0px 0 3px rgba(32, 71, 84, 0.02);
-}
 
-section:last-child {
-  margin-bottom: 0;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 [data-scroll] {
