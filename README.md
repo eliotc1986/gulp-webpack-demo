@@ -27,3 +27,11 @@ And then:
 ```
 $ npm start
 ```
+
+## For minified assets
+
+Run:
+
+```
+$ npm run build
+```
