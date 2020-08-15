@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "start": "gulp"
+    "start": "gulp",
+    "build": "gulp build --production"
   },
   "dependencies": {
     "scroll-out": "^2.2.11"
@@ -12,11 +13,21 @@
   "devDependencies": {
     "@babel/core": "^7.2.0",
     "@babel/preset-env": "^7.11.0",
+    "autoprefixer": "^9.8.6",
     "babel-loader": "^8.1.0",
     "browser-sync": "^2.26.12",
     "delete": "^1.1.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-cli": "^2.3.0",
+    "gulp-if": "^3.0.0",
+    "gulp-load-plugins": "^2.0.3",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-terser": "^1.3.2",
+    "uncss": "^0.17.3",
     "vinyl-named": "^1.1.0",
     "webpack": "^4.44.1",
     "webpack-stream": "^5.2.1",
