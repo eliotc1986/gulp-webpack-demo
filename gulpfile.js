@@ -17,13 +17,24 @@ const PRODUCTION = !!yargs.argv.production;
 
 const PORT = 9999;
 
-gulp.task('build', gulp.series(clean, gulp.parallel(javascript, sass)));
+const PATHS = {
+  DIST: 'dist',
+  ASSETS: 'dist/assets',
+};
+
+gulp.task('build', gulp.series(clean, gulp.parallel(javascript, sass, copy)));
 
 gulp.task('default', gulp.series('build', server, watch));
 
 // Remove dist folder before building
 function clean(done) {
-  del(['dist'], done);
+  del([PATHS.DIST], done);
+}
+
+// Copy files out of the assets folder
+// This task skips over the "img", "js", and "scss" folders, which are parsed separately
+function copy() {
+  return gulp.src('./index.html').pipe(gulp.dest(PATHS.DIST));
 }
 
 function sass() {
@@ -46,7 +57,7 @@ function sass() {
     .pipe($.postcss(postCssPlugins))
     .pipe($.if(PRODUCTION, $.cleanCss({ compatibility: 'ie9' })))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest(`${PATHS.ASSETS}/css`))
     .pipe(browser.reload({ stream: true }));
 }
 
@@ -84,13 +95,13 @@ function javascript() {
       ),
     )
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest(`${PATHS.ASSETS}/js`));
 }
 
 function server(done) {
   browser.init(
     {
-      server: './',
+      server: PATHS.DIST,
       port: PORT,
     },
     done,
@@ -98,7 +109,7 @@ function server(done) {
 }
 
 function watch() {
-  gulp.watch('./**/*.html').on('all', browser.reload);
+  gulp.watch('./**/*.html').on('all', copy); // Bug: will update the file but need to manually reload
   gulp.watch('src/**/*.js').on('all', gulp.series(javascript, browser.reload));
   gulp.watch('src/**/*.scss').on('all', sass);
 }
