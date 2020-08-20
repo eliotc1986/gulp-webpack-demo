@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.html",
-  "homepage": "https://github.com/eliotc1986/gulp-webpack-demo/",
+  "homepage": "https://eliotc1986.github.io/gulp-webpack-demo/",
   "scripts": {
     "start": "gulp",
     "build": "gulp build --production",
