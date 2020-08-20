@@ -1,6 +1,6 @@
-import ScrollOut from "scroll-out";
+import ScrollOut from 'scroll-out';
 
 ScrollOut({
-  threshold: .2,
-  once: true
+  threshold: 0.2,
+  once: true,
 });
